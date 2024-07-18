@@ -1,10 +1,10 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import IframeSandbox from '../components/IframeSandbox';
 
 const Index = () => {
   return (
-    <div className="text-center">
-      <h1 className="text-3xl">Your Blank Canvas</h1>
-      <p>Chat with the agent to start making edits.</p>
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">HTML Sandbox</h1>
+      <IframeSandbox />
     </div>
   );
 };
