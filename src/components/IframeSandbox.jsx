@@ -3,10 +3,10 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Card} from "@/components/ui/card";
 import {Resizable} from 're-resizable';
-import {Home, Minus, Search, Wrench, X} from 'lucide-react';
+import {Search, Wrench} from 'lucide-react';
 import {Badge} from "@/components/ui/badge";
-import {ScrollArea} from "@/components/ui/scroll-area";
 import InspectedElementPanel from "@/components/InspectedElementPanel.jsx";
+import {IframeToolbar} from "@/components/IframeToolbar.jsx";
 
 
 const add_script = (doc, context_name, chan) => {
@@ -110,11 +110,7 @@ const IframeSandbox = () => {
         }
     };
 
-    const handleClose = () => setHtmlContent('');
-    const handleMinimize = () => setIsMinimized(!isMinimized);
-    const handleHome = () => {
-        // Reset to initial state logic here
-    };
+
     const toggleInspector = () => {
         setIsInspectorMode(!isInspectorMode);
     };
@@ -197,17 +193,8 @@ const IframeSandbox = () => {
                     >
                         <Card className="w-full h-full flex flex-col">
                             <div className="flex items-center justify-between p-2 border-b">
-                                <div className="flex space-x-2">
-                                    <Button size="icon" variant="ghost" onClick={handleClose}>
-                                        <X className="h-4 w-4"/>
-                                    </Button>
-                                    <Button size="icon" variant="ghost" onClick={handleMinimize}>
-                                        <Minus className="h-4 w-4"/>
-                                    </Button>
-                                    <Button size="icon" variant="ghost" onClick={handleHome}>
-                                        <Home className="h-4 w-4"/>
-                                    </Button>
-                                </div>
+                                <IframeToolbar
+                                 />
                                 <div className="flex-grow mx-4">
                                     <div className="relative">
                                         <Search
