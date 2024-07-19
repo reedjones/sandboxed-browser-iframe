@@ -6,7 +6,7 @@ import {Resizable} from 're-resizable';
 import {Search, Wrench} from 'lucide-react';
 import {Badge} from "@/components/ui/badge";
 import InspectedElementPanel from "@/components/InspectedElementPanel.jsx";
-import {IframeToolbar} from "@/components/IframeToolbar.jsx";
+import FrameToolbar from "@/components/FrameToolbar/FrameToolbar.jsx";
 
 
 const add_script = (doc, context_name, chan) => {
@@ -193,7 +193,7 @@ const IframeSandbox = () => {
                     >
                         <Card className="w-full h-full flex flex-col">
                             <div className="flex items-center justify-between p-2 border-b">
-                                <IframeToolbar
+                                <FrameToolbar
                                  />
                                 <div className="flex-grow mx-4">
                                     <div className="relative">
